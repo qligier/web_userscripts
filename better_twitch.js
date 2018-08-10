@@ -3,6 +3,7 @@
 // @copyright     qligier 2018
 // @author        https://github.com/qligier/
 // @version       1.0.0
+// @updateURL     https://raw.githubusercontent.com/qligier/userscripts/master/better_twitch.js
 // @match         https://www.twitch.tv/*
 // @grant         none
 // @run-at        document-end
