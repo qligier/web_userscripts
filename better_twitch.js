@@ -2,7 +2,7 @@
 // @name          Better Twitch
 // @copyright     qligier 2018
 // @author        https://github.com/qligier/
-// @version       1.0.0
+// @version       1.0.1
 // @updateURL     https://raw.githubusercontent.com/qligier/userscripts/master/better_twitch.js
 // @match         https://www.twitch.tv/*
 // @grant         none
@@ -17,6 +17,12 @@ let stylesheetContent = `
 
 /* Remove Prime link from topbar navigation */
 .top-nav__menu a[href^="https://twitch.amazon.com/prime/"] {
+    display: none;
+}
+
+/* Remove Prime card from player */
+.extension-taskbar-card-container,
+.extension-overlays {
     display: none;
 }
 `;
