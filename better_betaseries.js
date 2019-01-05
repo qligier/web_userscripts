@@ -2,7 +2,7 @@
 // @name          Better Betaseries
 // @copyright     qligier 2018
 // @author        https://github.com/qligier/
-// @version       1.0.0
+// @version       1.0.1
 // @updateURL     https://raw.githubusercontent.com/qligier/userscripts/master/better_betaseries.js
 // @match         https://www.betaseries.com/membre/*/series
 // @grant         none
@@ -16,20 +16,25 @@ let stylesheetContent = `
     left: 0;
     height: 100%;
     width: 100%;
-    background: #f3faff;
+    background: #f1f8fe;
+    border-right: 1px solid #eeeeee;
     z-index: -1;
 }
 .last {
     color: #6280b1;
 }
 `;
+let queryAll = s => document.querySelectorAll(s),
+    queryOne = s => document.querySelector(s);
 
 (function () {
+    // Add stylesheet to document
     let stylesheet = document.createElement('style');
     stylesheet.innerHTML = stylesheetContent;
     document.body.appendChild(stylesheet);
 
-    document.querySelectorAll('#member_shows .showItem').forEach(
+    // Add progress bar to current series
+    queryAll('#member_shows .showItem').forEach(
         serieNode => {
             let progress = '0%';
             let statsNode = serieNode.querySelector('.last');
@@ -42,5 +47,11 @@ let stylesheetContent = `
             serieNode.prepend(progressBar);
         }
     );
+  
+    // Count series in each category
+    queryOne('.maincontent h1:nth-of-type(1)').innerText += ` (${queryAll('#member_shows .showItem').length} séries)`;
+    queryOne('.maincontent h1:nth-of-type(2)').innerText += ` (${queryAll('#member_archives .showItem').length} séries)`;
+    queryOne('.maincontent h1:nth-of-type(3)').innerText += ` (${queryAll('#member_archives_nonstarted .showItem').length} séries)`;
+    queryOne('.maincontent h1:nth-of-type(4)').innerText += ` (${queryAll('#member_archives_ended .showItem').length} séries)`;
 }
 )();
