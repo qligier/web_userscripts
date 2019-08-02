@@ -2,7 +2,7 @@
 // @name          Better Twitch
 // @copyright     qligier 2019
 // @author        https://github.com/qligier/
-// @version       1.0.2
+// @version       1.0.3
 // @updateURL     https://raw.githubusercontent.com/qligier/userscripts/master/better_twitch.js
 // @match         https://www.twitch.tv/*
 // @grant         none
@@ -12,10 +12,12 @@
 const stylesheetContent = `
 /* Hide unwanted elements */
 .top-nav__prime, /* Prime button from topbar */
-.top-nav__menu a[href^="https://twitch.amazon.com/prime/"], /* Prime link from topbar navigation */
+.top-nav__menu a[href^="https://twitch.amazon.com"], /* Prime link from topbar navigation */
 .top-nav__menu a[href^="https://www.twitch.tv/prime"], /* Prime link from topbar navigation */
 .extension-taskbar-card-container, /* Prime card in player */
 .extension-overlays, /* Prime card in player */
+.extensions-video-overlay-size-container, /* Overlay in player */
+.extensions-dock-card, /* Overlay in player */
 button[aria-label="Subscribe"], /* Subscribe button */
 button[data-a-target="top-nav-get-bits-button"], /* Get Bits button in topnav */
 .side-nav /* Sidebar */
