@@ -2,7 +2,7 @@
 // @name          Better Hacker News
 // @copyright     qligier 2018
 // @author        https://github.com/qligier/
-// @version       1.0.0
+// @version       1.0.1
 // @updateURL     https://raw.githubusercontent.com/qligier/userscripts/master/better_hackernews.js
 // @match         https://news.ycombinator.com/*
 // @grant         none
@@ -97,8 +97,14 @@ td.title a:visited {
     border-left: 3px solid #e8e8e8;
     padding-left: 8px;
 }
+.comment:hover {
+    border-color: #ff6e00;
+}
 .comment pre {
     background: #fdf3ed;
+}
+.comment-tree {
+    border-left: 6px solid #f7f7f7;
 }
 `;
 
