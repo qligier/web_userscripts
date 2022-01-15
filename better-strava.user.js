@@ -13,7 +13,7 @@
  * This userscript is updated from GitHub.
  */
 
- (function() {
+(function() {
   'use strict';
 
   //https://www.strava.com/activities/123/edit
