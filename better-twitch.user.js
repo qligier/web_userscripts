@@ -1,13 +1,17 @@
 // ==UserScript==
 // @name          Better Twitch
-// @copyright     qligier 2019
 // @author        https://github.com/qligier/
-// @version       1.0.3
-// @updateURL     https://raw.githubusercontent.com/qligier/userscripts/master/better_twitch.js
+// @namespace     qligier
+// @version       20190802
+// @updateURL     https://raw.githubusercontent.com/qligier/web_userscripts/master/better-twitch.user.js
 // @match         https://www.twitch.tv/*
 // @grant         none
 // @run-at        document-end
 // ==/UserScript==
+
+/**
+ * This userscript is updated from GitHub.
+ */
 
 const stylesheetContent = `
 /* Hide unwanted elements */
