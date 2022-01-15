@@ -29,9 +29,9 @@ tr.cancelled {
     const status = row.querySelector('td:nth-child(10)')
     if (status) {
       switch (status.innerText) {
-        case 'Cancelled':
-          row.classList.add('cancelled')
-          break;
+      case 'Cancelled':
+        row.classList.add('cancelled')
+        break;
       }
     }
   })
@@ -41,9 +41,9 @@ tr.cancelled {
     console.log(status)
     if (status) {
       switch (status.innerText) {
-        case 'Cancelled':
-          row.classList.add('cancelled')
-          break;
+      case 'Cancelled':
+        row.classList.add('cancelled')
+        break;
       }
     }
   })
