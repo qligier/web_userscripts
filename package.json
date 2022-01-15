@@ -1,0 +1,11 @@
+{
+  "name": "web-userscripts",
+  "author": "qligier",
+  "homepage": "https://github.com/qligier/web_userscripts",
+  "devDependencies": {
+    "eslint": "^8.6.0"
+  },
+  "scripts": {
+    "lint": "eslint --ext .js ."
+  }
+}
