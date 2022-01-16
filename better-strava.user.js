@@ -2,7 +2,7 @@
 // @name        Better Strava
 // @author      https://github.com/qligier/
 // @namespace   qligier
-// @version     20220115
+// @version     20220116
 // @updateURL   https://raw.githubusercontent.com/qligier/web_userscripts/master/better-strava.user.js
 // @match       https://www.strava.com
 // @match       https://www.strava.com/*
