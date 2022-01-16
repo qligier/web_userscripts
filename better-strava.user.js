@@ -32,14 +32,14 @@ function improveEditPage() {
   const nameSuggestionsNode = document.createElement('p')
   nameField.parentNode.insertBefore(nameSuggestionsNode, nameField.nextSibling)
 
-  const names = ['Arve Acacias-Sierne', 'Rhône Acacias-Evaux', 'Aire Acacias-Lully', 'Grimpe - bloc', 'HIIT']
+  const names = ['Arve Acacias-Sierne', 'Rhône Acacias-Evaux', 'Aire Acacias-Lully', 'Bout-du-Monde intervalles', 'Grimpe - bloc', 'HIIT']
   for (let index in names) {
     const nameSuggestionNode = document.createElement('span')
     nameSuggestionNode.innerText = names[index]
     nameSuggestionNode.style = 'color: #007FB6; cursor: pointer; margin-right: 15px; font-size: 0.9em;'
     nameSuggestionNode.onclick = () => {
       nameField.value = names[index]
-      if (index < 3) {
+      if (index < 4) {
         shoeField.value = '8332455'
         //visibilityField.value = 'everyone'
       }
