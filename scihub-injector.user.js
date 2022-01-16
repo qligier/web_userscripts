@@ -26,9 +26,10 @@ function pubMed() {
   const doi = document.querySelector(".identifier.doi > a").innerText;
   const links = document.querySelector(".full-text-links-list");
   links.innerHTML += `
-  <a class="link-item dialog-focus" href="${sciHubLink(
-    doi
-  )}" target="_blank" rel="noopener" title="See full text on SciHub"><img src="https://sci-hub.se/misc/img/logo_en.png" alt="full text provider logo"><span class="text">SciHub</span></a>
+  <a class="link-item dialog-focus" href="${sciHubLink(doi)}" target="_blank" rel="noopener" title="See full text on SciHub">
+    <img src="https://sci-hub.se/misc/img/logo_en.png" alt="full text provider logo">
+    <span class="text">SciHub</span>
+  </a>
   `;
 }
 
@@ -128,13 +129,8 @@ function wiley() {
   const menu = document.querySelector(".coolBar__second.rlist");
   menu.innerHTML += `
   <div class="coolBar__section coolBar--download PdfLink cloned">
-    <a href="${sciHubLink(
-      doi
-    )}" title="SciHub" class="coolBar__ctrl pdf-download"
-      ><img
-        src="https://sci-hub.se/misc/img/ravenround.gif"
-        alt="SciHub Logo"
-      />
+    <a href="${sciHubLink(doi)}" title="SciHub" class="coolBar__ctrl pdf-download">
+      <img src="https://sci-hub.se/misc/img/ravenround.gif" alt="SciHub Logo" />
       Access on SciHub
     </a>
   </div>
