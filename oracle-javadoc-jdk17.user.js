@@ -10,9 +10,12 @@
 // ==/UserScript==
 
 // Based on https://github.com/YujiSoftware/JavaAPI-Redirector
+/* global packageSearchIndex:readonly */
+/* global moduleSearchIndex:readonly */
+/* global removedPackageFromJdk11:readonly */
 
 (function () {
-	'use strict';
+  'use strict';
   
   const paths = [
     { version: 6, language: "en", hasModule: false, prefix: "/javase/6/docs/api/" },
