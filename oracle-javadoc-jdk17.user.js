@@ -6,6 +6,7 @@
 // @grant       none
 // @version     20220801
 // @require     https://raw.githubusercontent.com/YujiSoftware/JavaAPI-Redirector/master/search-index.js
+// @updateURL   https://github.com/qligier/web_userscripts/raw/master/oracle-javadoc-jdk17.user.js
 // ==/UserScript==
 
 // Based on https://github.com/YujiSoftware/JavaAPI-Redirector
