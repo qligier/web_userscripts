@@ -2,9 +2,9 @@
 // @name        Oracle Javadoc JDK17
 // @author      https://github.com/qligier/
 // @namespace   qligier
-// @match       https://docs.oracle.com/javase/7/*/docs/*
+// @match       https://docs.oracle.com/javase/*/docs/*
 // @grant       none
-// @version     20220801
+// @version     20220810
 // @require     https://raw.githubusercontent.com/YujiSoftware/JavaAPI-Redirector/master/search-index.js
 // @updateURL   https://github.com/qligier/web_userscripts/raw/master/oracle-javadoc-jdk17.user.js
 // ==/UserScript==
