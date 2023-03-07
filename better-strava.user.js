@@ -2,7 +2,7 @@
 // @name        Better Strava
 // @author      https://github.com/qligier/
 // @namespace   qligier
-// @version     20221010
+// @version     20230307
 // @updateURL   https://raw.githubusercontent.com/qligier/web_userscripts/master/better-strava.user.js
 // @match       https://www.strava.com/activities/*/edit
 // @grant       none
@@ -39,7 +39,7 @@ function improveEditPage() {
       nameField.value = names[index]
       document.querySelector('input[name="activity[visibility]"][value="everyone"]').checked = true
       if (index < 4) {
-        shoeField.value = '8332455'
+        shoeField.value = '12740691'
       }
     }
     nameSuggestionsNode.appendChild(nameSuggestionNode)
