@@ -2,11 +2,12 @@
 // @name          Better Hacker News
 // @author        https://github.com/qligier/
 // @namespace     qligier
-// @version       20190927
+// @version       20231113
 // @updateURL     https://raw.githubusercontent.com/qligier/web_userscripts/master/better-hackernews.user.js
 // @match         https://news.ycombinator.com/*
 // @grant         none
 // @run-at        document-end
+// @inject-into   content
 // ==/UserScript==
 
 /**
@@ -116,5 +117,17 @@ td.title a:visited {
   const stylesheet = document.createElement('style');
   stylesheet.innerHTML = stylesheetContent;
   document.body.appendChild(stylesheet);
+
+  for (let link of document.querySelectorAll('.titleline > a')) {
+    const domain = new URL(link.href).hostname
+    const imageUrl = `https://icons.duckduckgo.com/ip3/${domain}.ico`
+    const image = document.createElement('img')
+    image.src = imageUrl
+    image.width = 16
+    image.height = 16
+    image.style.paddingRight = '0.6em'
+    image.style.paddingLeft = '0.25em'
+    link.prepend(image)
+  }
 }
 )();
