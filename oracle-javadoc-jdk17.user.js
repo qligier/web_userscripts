@@ -4,7 +4,7 @@
 // @namespace   qligier
 // @match       https://docs.oracle.com/javase/*/docs/*
 // @grant       none
-// @version     20220810
+// @version     20250315
 // @require     https://raw.githubusercontent.com/YujiSoftware/JavaAPI-Redirector/master/search-index.js
 // @updateURL   https://github.com/qligier/web_userscripts/raw/master/oracle-javadoc-jdk17.user.js
 // ==/UserScript==
@@ -16,7 +16,7 @@
 
 (function () {
   'use strict';
-  
+
   const paths = [
     { version: 6, language: "en", hasModule: false, prefix: "/javase/6/docs/api/" },
     { version: 7, language: "en", hasModule: false, prefix: "/javase/7/docs/api/" },
@@ -31,8 +31,13 @@
     { version: 16, language: "en", hasModule: true, prefix: "/en/java/javase/16/docs/api/" },
     { version: 17, language: "en", hasModule: true, prefix: "/en/java/javase/17/docs/api/" },
     { version: 18, language: "en", hasModule: true, prefix: "/en/java/javase/18/docs/api/" },
+    { version: 19, language: "en", hasModule: true, prefix: "/en/java/javase/19/docs/api/" },
+    { version: 20, language: "en", hasModule: true, prefix: "/en/java/javase/20/docs/api/" },
+    { version: 21, language: "en", hasModule: true, prefix: "/en/java/javase/21/docs/api/" },
+    { version: 22, language: "en", hasModule: true, prefix: "/en/java/javase/22/docs/api/" },
+    { version: 23, language: "en", hasModule: true, prefix: "/en/java/javase/23/docs/api/" },
   ];
-  
+
   let javadoc = {
     found: false,
     version: -1,
@@ -42,7 +47,7 @@
     hash: ""
   }
   let redirectTo = 17
-  
+
   if(window.location.hostname === "docs.oracle.com") {
     const path = paths.find(p => window.location.pathname.startsWith(p.prefix))
     if (path !== undefined) {
@@ -61,7 +66,7 @@
       }
     }
   }
-  
+
   if (javadoc.found) {
     // Do not redirect packages removed from JDK11
     // See: JEP 320 (Remove the Java EE and CORBA Modules)
